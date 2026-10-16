@@ -5,13 +5,13 @@ on: [push, pull_request]
 jobs:
   build:
 
-    runs-on: windows-latest
+    runs-on: windows-11-vs2026-arm
     env:
       Projectname: LogRAM
     strategy:
       fail-fast: false
       matrix:
-        build_platform: [x64, x86, arm64]
+        build_platform: [arm64]
 
     steps:
     - name: Checkout repo
